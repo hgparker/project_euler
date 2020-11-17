@@ -1,0 +1,47 @@
+// Horizontal is similar, but a matrix now
+// Vertical is very similar
+// Diagonal
+
+
+Basically, I want to do Pr-8 but w/ changing functions for next / lastIndex:
+
+m = matrix-dimension
+p = looping over subsequence starting-points
+k = position in subseq
+x = length of product
+
+
+nIS (next in subsequence)
+fS (first subsequence)
+lIS (last in subsequence)
+nS (next subsequence)
+lS (last subsequence)
+
+HORIZONTAL (p=0:p=(m-1)*m:
+
+nIS(k) : k+1
+lIS(p) : p*m - 1 - x
+fS: 0
+nS : p + m
+lS = (m-1) * m
+
+VERTICAL: (p=0:p=m-1)
+
+nIS(k) = k+m
+lIS(p) = (m-1-x)*m  + p
+fS = p
+nS(p) = p+1
+lS = m-1
+
+AIGU DIAGONAL ((x-1)*m ::: p= (m-1)*m+(m-1)-x
+
+nIS(k) = k-m+1
+lIS(p) = minimum ( )
+            -- when k < m - x
+            -- or when k = m - 1 - x
+
+GRAVE DIAGONAL:
+
+***
+
+Y'all this is too complicated...just write resilient horz, vert, aigu, grave functions

@@ -1,0 +1,21 @@
+
+
+Collatz1 = just grind it out
+Collatz2 = just grind it out, making use of what you remember
+Collatz3 = remember everything
+Collatz4 = go backwards from one using priority queue
+
+B: write & test Collatz2'
+
+After fixing each odd q, do all q*2^m < limit for some m
+--(we can do this for all odds only, b/c if even, we already did it when we processed the odd part)
+--first, it takes same amount of work it would take to get any of them anyway
+--but it makes them available for termination-simplification earlier
+
+--made better w/ 3n+1 plugin
+
+
+
+D:
+A* : f(n)=g(n) [=collatzCost] + h(n) [it will take *at least* this many...)
+

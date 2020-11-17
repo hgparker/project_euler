@@ -1,0 +1,19 @@
+
+
+--Do magic3gon first to check basic ideas
+--Then update for 5gon check
+--Optimizations:
+    (a) Make such that first you find is also maximal
+    (b) If that's impossible, what about
+    cutting off loop earlier when least available is less than leading digit?
+
+Basic idea:
+--16 digit means 10 must be outside
+--choosing inner stations => largest pair must be completed by smallest number remaining
+    b/c otherwise wherever we would use that number would fall short of the sum
+--once you've picked one outer one, the rest are determined by having to sum --
+    hopefully you have the digits to do it
+--thus, we only have to check as many inner arrangements there are --
+    (9 choose 5) which can be arranged in 4! ways => ~3000 things to try, which is much more manageable than 10!
+
+--Possible improvement: search such that first you find is also greatest
