@@ -34,7 +34,7 @@ def getSolutionConvergent(D):
   p_ult = a*repetend[0] + 1
   q_ult = repetend[0]
   if n == 0:
-    print([D, 0, p_ult])
+    # print([D, 0, p_ult])
     return p_ult
   
   k = 1
@@ -42,7 +42,7 @@ def getSolutionConvergent(D):
     p = repetend[k % len(repetend)] * p_ult + p_penult
     q = repetend[k % len(repetend)] * q_ult + q_penult
     if n == k:
-      print([D, n, p])
+      # print([D, n, p])
       return p
     p_penult, q_penult = p_ult, q_ult
     p_ult, q_ult = p, q 
@@ -59,6 +59,6 @@ for k in range(2, int(sys.argv[1]) + 1):
   if min_solution > max_min_solution:
     max_min_solution = min_solution
     hardest_D = k
-    print(["new max = ", hardest_D]) 
+    # print(["new max = ", hardest_D]) 
 
 print(hardest_D)
