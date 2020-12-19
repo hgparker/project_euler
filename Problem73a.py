@@ -9,7 +9,7 @@ d = int(sys.argv[1])
 
 stack = [[3, 2]]
 num = 0
-
+# test = []
 while stack:
   leftDenominator, rightDenominator = stack.pop()
   if leftDenominator + rightDenominator > d:
@@ -18,4 +18,5 @@ while stack:
   stack.append([leftDenominator, leftDenominator + rightDenominator])
   stack.append([leftDenominator + rightDenominator, rightDenominator])
 
+# print(sorted(test))
 print(num)
