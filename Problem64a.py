@@ -31,4 +31,3 @@ for k in range(2, N+1):
     nextSquareRoot += 1
 
 print(numOddPeriods)
-
