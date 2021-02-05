@@ -40,12 +40,12 @@ def cycle(number, originalNumber, numDigits):
     solutions.add(number)
     return ret + 1
 
-oddDigits = [1,3,5,7,9]
-numSolutions = 1 # for 2
+oddDigits = [1,3,7,9]
+numSolutions = 2 # for 2 and 5
 solutions = set()
 tens = [1]
 
-for numDigits in range(1, 9):
+for numDigits in range(1, 7):
   for digitPermutation in it.product(oddDigits, repeat=numDigits):
     number = sum(map(lambda k: digitPermutation[k]*tens[k], range(numDigits)))
     if isPrime(number) and not number in solutions:
