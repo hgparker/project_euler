@@ -10,7 +10,7 @@ area = -inf
 m = 1
 
 while True:
-  lowN = floor(sqrt(8000000 / m / (m+1)))
+  lowN = floor(sqrt(4*N / m / (m+1)))
   if lowN < m:
     break
   result = abs(N- numRects(m, lowN))
@@ -23,4 +23,4 @@ while True:
     area = m*(lowN+1)
   m += 1
 
-print(best)
+print(area)
