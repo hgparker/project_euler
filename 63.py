@@ -8,7 +8,6 @@ most = 9
 n = 1
 total = 0
 while True:
-  print("n, ",n)
   minRoot = ceil(pow(least, 1/n))
   maxRoot = floor(pow(most, 1/n))
   if numdigits(maxRoot ** n) > n:
