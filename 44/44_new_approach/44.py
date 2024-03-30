@@ -1,6 +1,6 @@
 from math import sqrt
 import sys
-
+  
 def get_apts(c_bound):
   triplets = set()
 
@@ -33,6 +33,6 @@ for a, b, c in get_apts(bound):
     continue
   a = (a+1) // 6
   b = (b+1) // 6
-  difference = get_pentagonal(b) - get_pentagonal(a)
+  difference = abs(get_pentagonal(b) - get_pentagonal(a))
   if is_pentagonal(difference):
-    print(f"EXAMINE THIS ONE: {b-a}")
+    print(f"EXAMINE THIS ONE: {difference}")
